@@ -1,5 +1,7 @@
 package com.juliano.service;
 
+import com.theokanning.openai.service.OpenAiService;
+import com.theokanning.openai.completion.CompletionRequest;
 
 public class ConsultarChatGPT {
 

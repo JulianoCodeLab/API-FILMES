@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 public class Principal {
     private Scanner leitura = new Scanner(System.in);
-    private ConsumoApi consumo = new ConsumoApi();
+    private ConsumoAPI consumo = new ConsumoAPI();
     private ConverteDados conversor = new ConverteDados();
     private final String ENDERECO = "https://www.omdbapi.com/?t=";
     private final String API_KEY = "&apikey=6585022c";
@@ -184,10 +184,9 @@ public class Principal {
                         s.getAvaliacao()));
     }
     private void buscarSeriesPorCategoria() {
-        System.out.println("Deseja buscar séries de que categoria/gênero?
-                ");
+        System.out.println("Deseja buscar séries de que categoria/gênero? ");
                 var nomeGenero = leitura.nextLine();
-        Categoria categoria = Categoria.fromPortugues(NomeGenero);
+        Categoria categoria = Categoria.fromPortugues(nomeGenero);
         List<Serie> seriesPorCategoria =
                 repositorio.findByGenero(categoria);
         System.out.println("Séries da categoria " + nomeGenero);
